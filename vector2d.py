@@ -1,9 +1,13 @@
 import math
-
+import random
 class Vector2D(object):
     def __init__(self, _x, _y):
         self.x = _x
         self.y = _y
+    
+    @staticmethod
+    def UnitRandom():
+        return Vector2D(random.random(), random.random())
     
     def __add__(self, other):
         newX = 0
@@ -125,30 +129,40 @@ class Vector2D(object):
             raise RuntimeError(f"Vector2D '//=' requires Vector2D, int or float as parameter.")
         return self
     
+    def __pow__(self, other):
+        newX = 0
+        newY = 0
+        if isinstance(other, (int, float)):
+            newX = self.x ** other
+            newY = self.y ** other
+        else:
+            raise RuntimeError(f"Vector2D '**' requires int or float as parameter.")
+        return Vector2D(newX, newY)
+    
     def __neg__(self):
         return Vector2D(-self.x, -self.y)
-    
-    def __len__(self):
-        return self.length
     
     def __eq__(self, other):
         if isinstance(other, Vector2D):
             return self.x == other.x and self.y == other.y
         else:
             raise RuntimeError(f"Vector2D '==' requires Vector2D as parameter.")
+    
+    def __str__(self):
+        return "Vector {X:" + str(self.x) + ", Y:" + str(self.y) + "}"
 
-    @classmethod
+    @property
     def length(self):
         return math.sqrt((self.x ** 2) + (self.y ** 2))
     
-    def Normalise(self):
+    def getNormalised(self):
         length = self.length
 
         # Prevent DBZ error
         if length == 0:
             return [0, 0]
 
-        return [self.x/length, self.y/length]
+        return Vector2D(self.x/length, self.y/length)
     
     @staticmethod
     def DotProduct(a, b):

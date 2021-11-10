@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.0.1'
+VERSION = '1.1.1'
 DESCRIPTION = 'A Simple 2D Vector Class'
 LONG_DESCRIPTION = 'A Simple 2D Vector Class with standard functions used with vectors.'
 
@@ -11,8 +11,8 @@ setup(
         author_email="x0floh@gmail.com",
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
-        packages=find_packages(),
-        install_requires=['math'],
+        py_modules=['vector2d'],
+        install_requires=[],
         
         keywords=['python', 'vector', 'math'],
         classifiers= [
