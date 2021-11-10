@@ -1,6 +1,10 @@
 import math
 import random
 class Vector2D(object):
+
+    ZERO = Vector2D(0,0)
+    ONE = Vector2D(1,1)
+
     def __init__(self, _x, _y):
         self.x = _x
         self.y = _y
@@ -160,7 +164,7 @@ class Vector2D(object):
 
         # Prevent DBZ error
         if length == 0:
-            return [0, 0]
+            return Vector2D.ZERO
 
         return Vector2D(self.x/length, self.y/length)
     
