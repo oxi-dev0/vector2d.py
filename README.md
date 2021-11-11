@@ -79,7 +79,7 @@ a.length
 
 <br>
 
-You can normalise a Vector using the .getNormalised paramter:
+You can normalise a Vector using .getNormalised():
 ```python
 a.getNormalised()
 ```
