@@ -50,7 +50,7 @@ vector = Vector2D.One()
 
 <br>
 
-Vectors support all basic operations with other Vector2Ds, integers, or floats:
+Vectors support all basic operations with other Vectors, integers, or floats:
 ```python
 a+b
 a-b
@@ -60,7 +60,7 @@ a//b
 ```
 <br>
 
-Vectors support comparisons with other Vectors:
+Vectors support comparison with other Vectors:
 ```python
 a==b
 a!=b
@@ -71,7 +71,7 @@ a>=b
 ```
 <br>
 
-You can access a vectors length with the .length parameter:
+You can access a Vector's length with the .length parameter:
 ```python
 a.length
 ```
@@ -79,7 +79,7 @@ a.length
 
 <br>
 
-You can normalise a vector using the .getNormalised paramter:
+You can normalise a Vector using the .getNormalised paramter:
 ```python
 a.getNormalised()
 ```
