@@ -36,3 +36,4 @@ print("Random unit: " + str(Vector2D.UnitRandom()))
 print("Zero: " + str(Vector2D.Zero()))
 print("One: " + str(Vector2D.One()))
 
+print("Distance A - B: " + str(Vector2D.Distance(a,b)))
