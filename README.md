@@ -86,6 +86,13 @@ a.getNormalised()
 
 <br>
 
+You can get the distance between two points like this:
+```python
+Vector2D.Distance(a,b)
+```
+
+<br>
+
 You can get the dot or cross product like this:
 ```python
 Vector2D.DotProduct(a,b)
