@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/oxi-dev0/vector2d.py/blob/main/Images/logo.png?raw=true" width=350>
+   <img src="https://github.com/oxi-dev0/vector2d.py/blob/main/Images/logo.png?raw=true" width=300>
 </p>
 
 <h1 align="center"> Vector2D.py </h2>
