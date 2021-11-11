@@ -204,6 +204,10 @@ class Vector2D(object):
         return Vector2D(self.x/length, self.y/length)
     
     @staticmethod
+    def Distance(a, b):
+        return math.sqrt(((b.x-a.x)**2)+((b.y-a.y)**2))
+    
+    @staticmethod
     def DotProduct(a, b):
         if (not isinstance(a, Vector2D)) or (not isinstance(b, Vector2D)):
             raise RuntimeError(f"FVector2D.DotProduct() requires Vector2D as parameters.")

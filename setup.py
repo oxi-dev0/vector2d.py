@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.1.5'
+VERSION = '1.1.6'
 DESCRIPTION = 'A Simple 2D Vector Class'
 LONG_DESCRIPTION = 'A Simple 2D Vector Class with standard functions used with vectors.'
 
