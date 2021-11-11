@@ -43,8 +43,9 @@ from vector2d import Vector2D
 Creating a new vector:
 ```python
 vector = Vector2D(x, y)
-or
 vector = Vector2D.UnitRandom()
+vector = Vector2D.Zero()
+vector = Vector2D.One()
 ```
 
 <br>
