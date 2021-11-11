@@ -33,6 +33,8 @@ print("A == A? " + str(a == a))
 
 print("Random unit: " + str(Vector2D.UnitRandom()))
 
+print("Zero: " + str(Vector2D.Zero()))
+print("One: " + str(Vector2D.One()))
 
 print("Error Test")
 c = a + "hi"

@@ -1,10 +1,7 @@
 import math
 import random
+
 class Vector2D(object):
-
-    ZERO = Vector2D(0,0)
-    ONE = Vector2D(1,1)
-
     def __init__(self, _x, _y):
         self.x = _x
         self.y = _y
@@ -12,6 +9,14 @@ class Vector2D(object):
     @staticmethod
     def UnitRandom():
         return Vector2D(random.random(), random.random())
+    
+    @staticmethod
+    def Zero():
+        return Vector2D(0,0)
+    
+    @staticmethod
+    def One():
+        return Vector2D(1,1)
     
     def __add__(self, other):
         newX = 0
@@ -152,6 +157,36 @@ class Vector2D(object):
         else:
             raise RuntimeError(f"Vector2D '==' requires Vector2D as parameter.")
     
+    def __ne__(self, other):
+        if isinstance(other, Vector2D):
+            return self.x != other.x or self.y != other.y
+        else:
+            raise RuntimeError(f"Vector2D '!=' requires Vector2D as parameter.")
+    
+    def __gt__(self, other):
+        if isinstance(other, Vector2D):
+            return self.length > other.length
+        else:
+            raise RuntimeError(f"Vector2D '!=' requires Vector2D as parameter.")
+
+    def __ge__(self, other):
+        if isinstance(other, Vector2D):
+            return self.length >= other.length
+        else:
+            raise RuntimeError(f"Vector2D '!=' requires Vector2D as parameter.")
+
+    def __lt__(self, other):
+        if isinstance(other, Vector2D):
+            return self.length < other.length
+        else:
+            raise RuntimeError(f"Vector2D '!=' requires Vector2D as parameter.")
+
+    def __le__(self, other):
+        if isinstance(other, Vector2D):
+            return self.length <= other.length
+        else:
+            raise RuntimeError(f"Vector2D '!=' requires Vector2D as parameter.")
+    
     def __str__(self):
         return "Vector {X:" + str(self.x) + ", Y:" + str(self.y) + "}"
 
@@ -164,7 +199,7 @@ class Vector2D(object):
 
         # Prevent DBZ error
         if length == 0:
-            return Vector2D.ZERO
+            return Vector2D.Zero()
 
         return Vector2D(self.x/length, self.y/length)
     
