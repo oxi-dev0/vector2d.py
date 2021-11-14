@@ -219,7 +219,7 @@ class Vector2D(object):
         if (not isinstance(a, Vector2D)) or (not isinstance(b, Vector2D)):
             raise RuntimeError(f"Vector2D.Project() requires Vector2D as parameters.")
         else:
-            normB = b.Normalise()
+            normB = b.getNormalised()
             return normB * Vector2D.DotProduct(a, normB)
 
     def AsInt(self):
