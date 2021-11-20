@@ -208,6 +208,10 @@ class Vector2D(object):
         return math.sqrt(((b.x-a.x)**2)+((b.y-a.y)**2))
     
     @staticmethod
+    def Lerp(a, b, t):
+        return a + ((b-a).getNormalised() * (Vector2D.Distance(a, b) * t))
+    
+    @staticmethod
     def DotProduct(a, b):
         if (not isinstance(a, Vector2D)) or (not isinstance(b, Vector2D)):
             raise RuntimeError(f"FVector2D.DotProduct() requires Vector2D as parameters.")

@@ -26,6 +26,8 @@ print("Normalised B: " + str(b.getNormalised()))
 print("A dot B: " + str(Vector2D.DotProduct(a,b)))
 print("A cross B: " + str(Vector2D.CrossProduct(a,b)))
 
+print("0.5 Lerp A B: " + str(Vector2D.Lerp(a, b, 0.5)))
+
 print("Norm A dot Norm B: " + str(Vector2D.DotProduct(a.getNormalised(), b.getNormalised())))
 
 print("A == B? " + str(a == b))
