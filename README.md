@@ -86,6 +86,14 @@ a.getNormalised()
 
 <br>
 
+You can Linearly Interpolate between two points like this:
+```python
+Vector2D.Lerp(a,b,t)
+```
+`t` being the time value between a and b
+
+<br>
+
 You can get the distance between two points like this:
 ```python
 Vector2D.Distance(a,b)
