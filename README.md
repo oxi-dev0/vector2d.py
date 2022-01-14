@@ -86,6 +86,14 @@ a.getNormalised()
 
 <br>
 
+You can project a Vector onto another using .Project():
+```python
+Vector2D.Project(a,b)
+```
+(Projects A onto B)
+
+<br>
+
 You can Linearly Interpolate between two points like this:
 ```python
 Vector2D.Lerp(a,b,t)
