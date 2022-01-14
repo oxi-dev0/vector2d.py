@@ -23,7 +23,7 @@
     </a>
 </p>
 
-<h3 align="center"> A small, but rich 2D Vector class for python 3.x</h3>
+<h3 align="center"> A small, but fast 2D Vector class for python 3.x</h3>
 <br>
 <h2> Installation </h2>
 
