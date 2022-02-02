@@ -18,12 +18,9 @@
     <a href="#">
         <img src="https://img.shields.io/github/stars/oxi-dev0/vector2d.py" alt="Stars">
     </a>
-    <a href="Look%20at%20this%20simple%20Vector2D%20Class%20for%20python%21%20https%3A%2F%2Fgithub.com%2Foxi-dev0%2Fvector2d.py">
-      <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Foxi-dev0%2Fvector2d.py" alt="Tweet">
-    </a>
 </p>
 
-<h3 align="center"> A small, but rich 2D Vector class for python 3.x</h3>
+<h3 align="center"> A small, but fast 2D Vector class for python 3.x</h3>
 <br>
 <h2> Installation </h2>
 
@@ -83,6 +80,22 @@ You can normalise a Vector using .getNormalised():
 ```python
 a.getNormalised()
 ```
+
+<br>
+
+You can project a Vector onto another using .Project():
+```python
+Vector2D.Project(a,b)
+```
+(Projects A onto B)
+
+<br>
+
+You can Linearly Interpolate between two points like this:
+```python
+Vector2D.Lerp(a,b,t)
+```
+`t` being the time value between a and b
 
 <br>
 
