@@ -79,6 +79,19 @@ class Vector2D(object):
             raise RuntimeError(f"Vector2D '*' requires Vector2D, int or float as parameter.")
         return Vector2D(newX, newY)
     
+    def __rmul__(self, other):
+        newX = 0
+        newY = 0
+        if isinstance(other, Vector2D):
+            newX = self.x * other.x
+            newY = self.y * other.y
+        elif isinstance(other, (int, float)):
+            newX = self.x * other
+            newY = self.y * other
+        else:
+            raise RuntimeError(f"Vector2D '*' requires Vector2D, int or float as parameter.")
+        return Vector2D(newX, newY)
+    
     def __imul__(self, other):
         if isinstance(other, Vector2D):
             self.x *= other.x
@@ -273,3 +286,27 @@ class Vector2D(object):
                 return True
             else:
                 return False
+    
+    @staticmethod
+    def Intersection(p1, p2, p3, p4):
+        if (not isinstance(p1, Vector2D)) or (not isinstance(p2, Vector2D)) or (not isinstance(p3, Vector2D)) or (not isinstance(p4, Vector2D)):
+            raise RuntimeError(f"Vector2D.Intersection() requires Vector2Ds as parameters.")
+        else:
+            if Vector2D.isIntersecting(p1, p2, p3, p4):
+
+                 # https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection
+                 # Calculate intersection point on segments.
+
+                Tn = ((p1.x - p3.x) * (p3.y - p4.y)) - ((p1.y - p3.y) * (p3.x - p4.x))
+                Td = ((p1.x - p2.x) * (p3.y - p4.y)) - ((p1.y - p2.y) * (p3.x - p4.x))
+                if not Td == 0:
+                    t = Tn / Td
+
+                    x = p1.x + (t * (p2.x - p1.x))
+                    y = p1.y + (t * (p2.y - p1.y))
+
+                    return Vector2D(int(x),int(y))
+                else:
+                    return None
+            else:
+                return None

@@ -1,8 +1,9 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.1.9'
-DESCRIPTION = 'A Simple 2D Vector Class'
-LONG_DESCRIPTION = 'A Simple 2D Vector Class with standard functions used with vectors.'
+VERSION = '1.2'
+DESCRIPTION = 'A small, but fast 2D Vector class for python 3.x'
+LONG_DESCRIPTION = 'A small, but fast 2D Vector class for python 3.x, with standard Vector functions.'
+URL = 'https://github.com/oxi-dev0/vector2d.py'
 
 setup(
         name="vector2d.py", 
@@ -13,6 +14,7 @@ setup(
         long_description=LONG_DESCRIPTION,
         py_modules=['vector2d'],
         install_requires=[],
+        url=URL,
         
         project_urls={'Github': 'https://github.com/oxi-dev0/vector2d.py'},
 
