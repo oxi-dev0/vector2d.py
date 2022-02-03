@@ -6,17 +6,22 @@ def getms():
 
 a = Vector2D(0, 5)
 b = Vector2D(5, 10)
+c = Vector2D(2, 3)
 
 print("Validity Checks:")
 
 print("A: " + str(a))
 print("B: " + str(b))
+print("C: " + str(c))
 
 print("A + B: " + str(a+b))
 print("A - B: " + str(a-b))
 print("A * B: " + str(a*b))
 print("A / B: " + str(a/b))
 print("A // B: " + str(a//b))
+
+print(f"10 / b (rdiv): {10/b}")
+print(f"15 % c (rmod): {2%c}")
 
 print("Length A: " + str(a.length))
 print("Length B: " + str(b.length))

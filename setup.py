@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.2'
+VERSION = '1.2.1'
 DESCRIPTION = 'A small, but fast 2D Vector class for python 3.x'
 LONG_DESCRIPTION = 'A small, but fast 2D Vector class for python 3.x, with standard Vector functions.'
 URL = 'https://github.com/oxi-dev0/vector2d.py'
