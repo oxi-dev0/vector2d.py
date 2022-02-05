@@ -314,11 +314,16 @@ class Vector2D(object):
     
     @staticmethod
     def Distance(a, b):
+        # (b-a).length
         return math.sqrt(((b.x-a.x)**2)+((b.y-a.y)**2))
     
     @staticmethod
     def Lerp(a, b, t):
         return a + ((b-a).getNormalised() * (Vector2D.Distance(a, b) * t))
+
+    @staticmethod
+    def InverseLerp(a, b, v):
+        return ((v - a) / (b - a)).x
     
     @staticmethod
     def DotProduct(a, b):
