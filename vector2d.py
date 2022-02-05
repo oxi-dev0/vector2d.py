@@ -323,7 +323,9 @@ class Vector2D(object):
 
     @staticmethod
     def InverseLerp(a, b, v):
-        return ((v - a) / (b - a)).x
+        max = (b-a).length
+        vDist = (v-a).length
+        return vDist / max
     
     @staticmethod
     def DotProduct(a, b):
