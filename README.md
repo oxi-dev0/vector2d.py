@@ -37,7 +37,7 @@ from vector2d import Vector2D
 
 <h2> Documentation </h2>
 
-Creating a new vector:
+Definitions
 ```python
 vector = Vector2D(x, y)
 vector = Vector2D.UnitRandom()
@@ -47,7 +47,7 @@ vector = Vector2D.One()
 
 <br>
 
-Vectors support all basic operations with other Vectors, integers, or floats:
+Operations
 ```python
 a+b
 a-b
@@ -55,9 +55,11 @@ a*b
 a/b
 a//b
 ```
+> **Vectors support operations with other Vectors, integers, or floats.**
+
 <br>
 
-Vectors support comparison with other Vectors:
+Comparison
 ```python
 a==b
 a!=b
@@ -68,7 +70,7 @@ a>=b
 ```
 <br>
 
-You can access a Vector's length with the .length parameter:
+Length
 ```python
 a.length
 ```
@@ -76,7 +78,7 @@ a.length
 
 <br>
 
-You can normalise a Vector using .getNormalised():
+Normalise
 ```python
 a.getNormalised()
 ```
@@ -91,7 +93,7 @@ Vector2D.Project(a,b)
 
 <br>
 
-You can Linearly Interpolate between two points like this:
+Linear Interpolation
 ```python
 Vector2D.Lerp(a,b,t)
 ```
@@ -99,14 +101,14 @@ Vector2D.Lerp(a,b,t)
 
 <br>
 
-You can get the distance between two points like this:
+Distance Calculation
 ```python
 Vector2D.Distance(a,b)
 ```
 
 <br>
 
-You can get the dot or cross product like this:
+Dot and Cross Products
 ```python
 Vector2D.DotProduct(a,b)
 Vector2D.CrossProduct(a,b)
@@ -114,8 +116,8 @@ Vector2D.CrossProduct(a,b)
 
 <br>
 
-You can check if two segments are intersecting like this:
+Calculating an intersection between two line segments
 ```python
-Vector2D.isIntersecting(p1,p2,p3,p4)
+Vector2D.Intersection(p1, p2, p3, p4)
 ```
-With p1-4 representing points on two lines (p1-2: line 1, p3-4: line 2)
+(P1-2: Line 1, P3-4: Line 2)
