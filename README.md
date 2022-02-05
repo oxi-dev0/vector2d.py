@@ -69,6 +69,7 @@ a<=b
 a>=b
 ```
 <br>
+<br>
 
 Length
 ```python
@@ -84,13 +85,15 @@ a.getNormalised()
 ```
 
 <br>
+<br>
 
-You can project a Vector onto another using .Project():
+Vector Projection
 ```python
 Vector2D.Project(a,b)
 ```
 (Projects A onto B)
 
+<br>
 <br>
 
 Linear Interpolation
@@ -101,11 +104,23 @@ Vector2D.Lerp(a,b,t)
 
 <br>
 
+Inverse Linear Interpolation
+```python
+Vector2D.InverseLerp(a,b,v)
+# Returns t
+```
+`t` being the time value between a and b
+and `v` being the vector between a and b
+
+<br>
+<br>
+
 Distance Calculation
 ```python
 Vector2D.Distance(a,b)
 ```
 
+<br>
 <br>
 
 Dot and Cross Products
@@ -114,6 +129,7 @@ Vector2D.DotProduct(a,b)
 Vector2D.CrossProduct(a,b)
 ```
 
+<br>
 <br>
 
 Calculating an intersection between two line segments
