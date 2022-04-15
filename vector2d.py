@@ -302,6 +302,8 @@ class Vector2D(object):
     @property
     def length(self):
         return math.sqrt((self.x ** 2) + (self.y ** 2))
+
+    __len__ = length.fget
     
     def getNormalised(self):
         length = self.length

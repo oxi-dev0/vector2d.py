@@ -74,9 +74,9 @@ a>=b
 Length
 ```python
 a.length
+# or
+len(a)
 ```
-> :warning: **len(a) will not work**: It will throw an error!
-
 <br>
 
 Normalise
